@@ -17,4 +17,4 @@ else
 	echo "Create dir $HOME/cache or specify cache dir in $CACHE_DIR to persist dependencies"
 fi
 
-docker run -it --rm $CACHE_CMD -v $PWD:/var/project -p 9000:9000 sedsimon/activator $@
+docker run -it --rm $CACHE_CMD -v $PWD:/var/project -p 9000:9000 sedsimon/playframework4dev $@
