@@ -90,8 +90,7 @@ Vagrant.configure(2) do |config|
   end
 
   config.vm.provision "docker" do |d|
-    d.build_image "/vagrant",
-      args: "-t sedsimon/playframework4dev"
+    d.pull_images "sedsimon/playframework4dev"
   end
   config.vm.provision "shell", path: "provision.sh"
 end
